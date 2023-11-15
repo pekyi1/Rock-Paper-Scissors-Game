@@ -68,10 +68,12 @@
             document.querySelector('.js-result').innerHTML = result;
 
             document.querySelector('.js-moves').innerHTML = 
-            `You
-            <img class="move-icon" src="images/${playerMove}-emoji.png">
-            <img class="move-icon" src="images/${computerMove}-emoji.png">
-            Computer`;
+            `<div class="row">
+            <div class="col-lg-6 col-md-6 col-xs-6 order-sm-1 order-md-1 "><h5 class="text-center">You</h5></div>
+            <div class="col-lg-6 col-md-6 col-xs-6 order-sm-3 order-md-3 align-items-center"><div class="row result-icon-box"><img class="result-icon" src="images/${playerMove}-emoji.png"></div></div>
+            <div class="col-lg-6 col-md-6 col-xs-6 order-sm-4 order-md-4 align-items-center"><div class="row result-icon-box"><img class="result-icon" src="images/${computerMove}-emoji.png"></div></div>
+            <div class="col-lg-6 col-md-6 col-xs-6 order-sm-2 order-md-2"><h5 class="text-center">Computer</h5></div>
+            </div>`
 
             
             
@@ -81,6 +83,7 @@
             document.querySelector('.js-score').innerHTML = `Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}.`
 
             document.querySelector('.js-moves').innerHTML = '';
+            document.querySelector('.js-result').innerHTML = '';
 
 
         }
